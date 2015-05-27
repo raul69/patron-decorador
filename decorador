@@ -1,0 +1,25 @@
+<?php
+class Damage
+{
+    protected $name;
+    protected $damagePoints = 10;
+
+    public function __construct($name)
+    {
+        $this->name = $name;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getDamage()
+    {
+        return $this->damagePoints;
+    }
+}
+
+$damage = new Damage('Rocky');
+echo 'Un golpe de ' . $damage->getName() . ' es de ' . $damage->getDamage() . ' puntos' . PHP_EOL;
+?>
